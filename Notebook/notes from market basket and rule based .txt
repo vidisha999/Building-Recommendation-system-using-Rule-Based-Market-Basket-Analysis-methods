@@ -1,0 +1,66 @@
+Notes from Rule based and market basket analysis in Recommendar systems 
+
+Decode special escape sequneces when loading the csv dataset:
+   df= pd.read_csv('file',enocoding='unicode_escape')
+     - unicode_escape : uses to decocodec unicode characters or backslash escape sequences (like \n, \u2019, etc.) into their corresponding Unicode characters.
+     - 'utf-8' : default decoding option which supports all international charcters in the unicode standard
+     - 'latin1' : for western european characters 
+ --------------------------------------------
+When plotting the sns plots why need to reset index of the df ?
+   If the df has either X or Y axis set as index, it should be chnaged to columns as sns expect only columns 
+--------------
+ax = free_items.year_month.value_counts().sort_index() # sort values based on the index year_month
+---------------
+apirori algorithm
+
+support:  measures how frequently an itemset appears in the dataset.
+confidence : measures the likelihood of item B being bought when item A is bought (i.e., the conditional probability of B given A).
+lift : Lift tells you how much more likely B is to be bought when A is bought, compared to random chance.
+Association Rules:finds relationships among large sets of data items to shows how frequently a itemset occurs in a transaction.
+
+frequent_itemsets=apriori(item_df,min_support=0.15,use_colnames=True)
+ - min_support =0.15 : Only include itemsets that appear in at least 15% of all transactions.
+ - col_names= show actual item names instead of index numbers 
+rules=association_rules(frequent_itemsets,metric='lift',min_threshold=1)
+ - metric : metric use to filter rules ( ex: support, confidence, lift)
+ - min_treshold : threshold for the metric
+rules.sort_values(['lift','support'],ascending=False).reset_index(drop=True)
+------------------------------------
+
+Output of association rules using apriori algorithm creates a dataframe :
+
+    from mlxtrend.frequent_patterns import association_rules
+    rules=association_rules(frequent_itemsets,metric='lift',min_treshold=1)
+    rules.sort_values(by=(['lift'.'support'],ascending=False).reset_index(drop=True)
+antecedents	consequents	support	confidence	lift
+{'A'}	{'B'}	0.16	0.80	1.33
+
+This generates a dataframe that contains columns ; "antecedents", "consequents", "support", "confidence", "lift".
+- antecedents : items on the left side of the rule 
+- consequents : items on the right side of the rule
+- support : fraction of transactions contains both antecedents and consequents
+- confidence: How often consequents appear in the transactions that contain antecedents
+- lift : How likely consequents are to appear with  antecedents than by random chance
+
+-------------------------------
+Digraph to visualize the association rules :
+
+A DiGraph is a type of graph where edges have direction. That means each edge goes from one node to another specific node (not both ways, unless explicitly added).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
