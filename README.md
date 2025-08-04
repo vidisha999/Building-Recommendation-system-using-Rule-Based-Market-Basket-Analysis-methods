@@ -5,3 +5,33 @@ With the rapid expansion of e-business platforms across various industries, both
 In "Rule Based" recommenders, various rules such as popularity of the products, new product launches, discount and offers are considered when making recommendations to users. 
 "Market Basket Analysis" uses algorithms such as 'Apirori' to understand the purchase behavior of users ( frequently bought itemsets in the same transaction) using association rules and recommend frequent itemsets to future users. It suses metrics such as support, confidence and lift to determine which are the frequently bought itemsets.
 
+## Project overview 
+This project uses a commedities dataset to build recommendation systems based on the both rules based method and market basket analysis technique. 
+## Data 
+The dataset contains transactional data collected from online retail company that sells unique all occasion gifts which occured between 01/12/2010 and 09/12/2011. Dataset can be found in the [UCL machine learning repository](https://archive.ics.uci.edu/dataset/352/online+retail). It contains information about 500k+ customers over eight attributes which are InvoiceNo, StockCode, Description, Quantity, InvoiceDate, UnitPrice, CustomerID, Country.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
