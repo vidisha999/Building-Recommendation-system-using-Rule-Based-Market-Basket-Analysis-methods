@@ -67,8 +67,29 @@ The following image highlights the top recommended items across selected countri
 
 ***Image 10***: The Top 110 recommended items based on the each Country 
 
+### Recommendations based on the Purchase History 
+Based on the purchase history of items, some of the top recommended items are : 'WHITE HANGING HEART T-LIGHT HOLDER','WHITE METAL LANTERN','CREAM CUPID HEARTS COAT HANGER','KNITTED UNION FLAG HOT WATER BOTTLE','RED WOOLLY HOTTIE WHITE HEART.'
 
-
+## Implementation of Market Basket Analysis 
+This method in recommendar systems identfy frequently bought itemsets by customers through calculating the likelihood of buying items together in the same transaction/basket.
+With the use of Apiriori algorithm, on a dataframe that represents transactional data, where each row corresponds to a transaction and each column represents an item, it identifies the items co-occur in transactions and generate association rules. These association rules generates a dataframe with attributes antecedents, consequents and support, confidence and lift.
+- antecedents : items on the left side of the rule
+- consequents : items on the right side of the rule
+- antecedent support : proportion of transactions contain antecedent
+- consequent support : proportion of transactions contain consequent
+- support : fraction of transactions contains both antecedents and consequents
+- confidence: How often consequents appear in the transactions that contain antecedents
+- lift : How likely consequents are to appear with antecedents than by random chance
+The following function is defined to find the association rules from the co-relation between items and  recommend the top consequents for a selected item
+```python 
+def frequently_bought_together(item):
+    # df of item passed
+    item_df = basket.loc[basket[item]==1]
+    frequent_itemsets=apriori(item_df,min_support=0.15,use_colnames=True)#Apply apriori algorithm on item df 
+    rules=association_rules(frequent_itemsets,metric='lift',min_threshold=1)
+    rules.sort_values(['lift','support'],ascending=False).reset_index(drop=True)
+    return rules['consequents'].unique()[:6]
+ ```
 
 
 
