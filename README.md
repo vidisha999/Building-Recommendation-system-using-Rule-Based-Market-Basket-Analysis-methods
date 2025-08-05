@@ -51,6 +51,17 @@ Several customer based and item based insights were gained from the EDA.
 5. Top 5 items that were the first choice by the customers are : 'PAINTED METAL PEARS ASSORTED','LUNCH BAG SPACEBOY DESIGN ','METAL DECORATION NAUGHTY CHILDREN', 'JUMBO BAG RED RETROSPOT' and 'VINTAGE DOILY DELUXE SEWING KIT ' .
 
 
+## Implementation of Rule Based Recommendation Systems 
+Recommendations were made using two types of rules in this project: 
+1. Popularity based
+2. Buy again( based on the purchase history of customers)
+
+### Popularity Based Recommendations 
+Given its global popularity, 'Paper Craft Little Birdie' can be recommended as a potential purchase item for new users.
+![image9](Images/image10.png)
+
+***Image 9***: Top 10 recommended products based on the Global popularity of the products 
+
 
 
 
