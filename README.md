@@ -80,6 +80,7 @@ With the use of Apiriori algorithm, on a dataframe that represents transactional
 - support : fraction of transactions contains both antecedents and consequents
 - confidence: How often consequents appear in the transactions that contain antecedents
 - lift : How likely consequents are to appear with antecedents than by random chance
+
 The following function is defined to find the association rules from the co-relation between items and  recommend the top consequents for a selected item
 ```python 
 def frequently_bought_together(item):
