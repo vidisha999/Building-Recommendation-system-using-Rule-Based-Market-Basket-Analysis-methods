@@ -62,8 +62,10 @@ Given its global popularity, 'Paper Craft Little Birdie' can be recommended as a
 
 ***Image 9***: Top 10 recommended products based on the Global popularity of the products 
 
+The following image highlights the top recommended items across selected countries.
+![image10](Images/image11.png) 
 
-
+***Image 10***: The Top 110 recommended items based on the each Country 
 
 
 
