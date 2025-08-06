@@ -99,7 +99,8 @@ The purpose of this plot is to visually identify how rules are formed together b
 
 In this plot, green nodes represents the individual items and yellow nodes represents association rules which are labeled as R1, R2... etc. edges from green nodes to yellow nodes indicate that the item is part of the antecedent of the rule and edges from yellow to green nodes indicate that items are part of the consequents of the rule. Although edge thickness(weight) is set uniform in this plot, it could use to represent the strength of the rules. 
 
-
+## Conclusion 
+Recommender systems personalize user experiences by analyzing data like purchase history and preferences. Rule-based models use product popularity and promotions, while Market Basket Analysis applies algorithms like Apriori to find frequently bought itemsets. These systems boost customer satisfaction, engagement, and business growth.
 
 
 
