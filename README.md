@@ -91,8 +91,11 @@ def frequently_bought_together(item):
     rules.sort_values(['lift','support'],ascending=False).reset_index(drop=True)
     return rules['consequents'].unique()[:6]
  ```
+### Visualization of association rules 
+The purpose of this plot is to visually identify how rules are formed together between items, which items are central to multiple rules to identify the frequently bought itemsets.
+![image13](Images/bigraph1.png)
 
-
+***Image 11*** : This plot shows the relationship between association rules and items (conseqquents) for the item 
 
 
 
