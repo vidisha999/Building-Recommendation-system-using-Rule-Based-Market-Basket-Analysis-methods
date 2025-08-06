@@ -95,10 +95,9 @@ def frequently_bought_together(item):
 The purpose of this plot is to visually identify how rules are formed together between items, which items are central to multiple rules to identify the frequently bought itemsets.
 ![image13](Images/bigraph1.png)
 
-***Image 11*** : This plot shows the relationship between association rules and items (conseqquents) for the item 
+***Image 11*** : This plot shows the relationship between association rules and items (conseqquents) for the item ' JAM MAKING SET WITH JARS' when 6 rules are selected. It shows customers who bought this item also tend to buy to 'ROSES REGENCY TEACUPS AND SAUCER' as these two items are associated by three association rules R3, R5 and R4.
 
-
-
+In this plot, green nodes represents the individual items and yellow nodes represents association rules which are labeled as R1, R2... etc. edges from green nodes to yellow nodes indicate that the item is part of the antecedent of the rule and edges from yellow to green nodes indicate that items are part of the consequents of the rule. Although edge thickness(weight) is set uniform in this plot, it could use to represent the strength of the rules. 
 
 
 
